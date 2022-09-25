@@ -1,0 +1,33 @@
+.home{
+  width: 100%;
+
+
+}
+section{
+margin-left: 2rem;
+margin-top: 2rem;
+  
+}
+.navbar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 100%
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+
+li{
+  display: flex;
+  flex-direction: row;
+
+  
+}
