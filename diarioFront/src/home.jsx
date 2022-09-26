@@ -1,18 +1,14 @@
 
 import './home.css'
+import NavBar from "./assets/navbar/navBar"
+import Featured from "./assets/Featured/Featured"
 
 function home() {
   
 return (
     <div className="home">
-     <section><nav className='navbar'>
-        <ul>
-          <li>home</li>
-          <li>Poesias</li>
-          <li>Contos</li>
-          <li>Prosa</li>
-        </ul>
-        </nav></section>
+   <NavBar />
+   <Featured />
     </div>
   )
 }

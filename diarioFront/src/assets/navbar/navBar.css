@@ -1,0 +1,41 @@
+section{
+margin-left: 9rem;
+margin-top: 2rem;
+      
+    }
+    .navbar{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      max-width: 100%;
+      background-color: #bcd7ec;
+      width: 70%;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+     border-bottom-left-radius: 0.3rem;
+     border-top-left-radius: 0.3rem;
+    }
+    ul{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 70%;
+      list-style: none;
+      align-content: center;
+      flex-wrap: nowrap;
+      margin-top: 1rem;
+     
+    }
+    
+    li{
+      display: flex;
+      flex-direction: row;
+      margin-left: 1rem;
+     margin-bottom: 1rem;
+      background-color: #4ea3dd;
+      cursor: pointer;
+      border-radius: 0.2rem;
+      color: #dfe4f4;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
