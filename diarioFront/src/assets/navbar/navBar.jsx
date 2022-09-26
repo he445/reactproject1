@@ -4,16 +4,9 @@ import Form from "../formModal/formModal";
 import "./navBar.css"
 const customStyles = {
   content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    width: "40rem",
-    height: "50rem",
-    transform: "translate(-50%, -50%)",
-    backgroundColor: " rgba(0, 0, 0, 0.8)",
-    borderRadius: "15px",
+    width: "40%",
+    height: "40%",
+   
   },
   overlay: {
     background: "rgba(0, 0, 0, 0.4)",
@@ -41,10 +34,10 @@ function navbar(create)
     <Modal
         isOpen={modalIsOpen}
         onRequestClose={handleModal}
-        style={customStyles}
         contentLabel="form Create"
-      >
-        <Form create={create}  handleModal={handleModal} />
+        style={customStyles}
+    >
+        <Form   handleModal={handleModal} />
       </Modal>
     </section>
 )}
