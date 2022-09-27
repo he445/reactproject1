@@ -1,3 +1,7 @@
+.feature{
+    margin-top: 2rem;
+}
+
 .textlist{
     display: flex;
     margin-left: 1rem;
@@ -21,7 +25,8 @@
     margin-bottom: 1rem;
 }
 
-h1{color:#0193f7;}
+h1{color:#0193f7;
+margin-bottom: 1rem;}
 
 .textbtn{background-color:#4ea3dd;
     color: #dfe4f4;
