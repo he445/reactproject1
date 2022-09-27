@@ -1,0 +1,19 @@
+.textModal {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #4ea3dd;
+  height: 100%;
+  color: #dfe4f4;
+}
+
+.textModalH2 {
+  padding-top: 1rem;
+  padding-left: 0.4rem;
+}
+
+.textModalP {
+  padding-top: 1rem;
+  padding-left: 0.4rem;
+}

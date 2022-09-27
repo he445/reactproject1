@@ -1,8 +1,10 @@
-form{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: #4ea3dd;
-    height: 100%;
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #4ea3dd;
+  height: 100%;
 }
-label{color:#dfe4f4;}
+label {
+  color: #dfe4f4;
+}

@@ -1,16 +1,14 @@
-
-import './home.css'
-import NavBar from "./assets/navbar/navBar"
-import Featured from "./assets/Featured/Featured"
+import './home.css';
+import NavBar from './assets/navbar/navBar';
+import Featured from './assets/Featured/Featured';
 
 function home() {
-  
-return (
+  return (
     <div className="home">
-   <NavBar />
-   <Featured />
+      <NavBar />
+      <Featured />
     </div>
-  )
+  );
 }
 
-export default home
+export default home;

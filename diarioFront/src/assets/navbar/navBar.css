@@ -1,57 +1,57 @@
-section{
-margin-left: 5rem;
-height: 20% ;
+section {
+  margin-left: 5rem;
+  height: 20%;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #bcd7ec;
+  width: 90%;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+}
+.navBarUl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 70%;
+  list-style: none;
+  align-content: center;
+  flex-wrap: nowrap;
+  margin-top: 1rem;
+}
 
-      
-    }
-    .navbar{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      background-color: #bcd7ec;
-      width: 90%;
-      border-top-right-radius: 1rem;
-      border-bottom-right-radius: 1rem;
-     border-bottom-left-radius: 0.3rem;
-     border-top-left-radius: 0.3rem;
-     
-    }
-    .navBarUl{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 70%;
-      list-style: none;
-      align-content: center;
-      flex-wrap: nowrap;
-      margin-top: 1rem;
-     
-    }
-    
-    .navBarLI{
-      display: flex;
-      flex-direction: row;
-      margin-left: 1rem;
-     margin-bottom: 1rem;
-      background-color: #4ea3dd;
-      cursor: pointer;
-      border-radius: 0.2rem;
-      color: #dfe4f4;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-    }
+.navBarLI {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  background-color: #4ea3dd;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  color: #dfe4f4;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 
-    .navbarh1{display: flex;
-      align-items: center;
-    width: 100%;
-  padding-left: 1rem;}
+.navbarh1 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 1rem;
+}
 
-   .modal-button{ background-color:#4ea3dd;
-    color: #dfe4f4;
-    border-top-right-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
-   border-bottom-left-radius: 0.3rem;
-   border-top-left-radius: 0.3rem;
-   border-color: #dfe4f4;
-   width: 10%;
-   height: 100%;}
+.modal-button {
+  background-color: #4ea3dd;
+  color: #dfe4f4;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  border-top-left-radius: 0.3rem;
+  border-color: #dfe4f4;
+  width: 10%;
+  height: 100%;
+}
