@@ -1,33 +1,36 @@
 .feature {
   margin-top: 2rem;
+  width: 90%;
+}
+.featureUL{
+ width: 60%;
+
 }
 
 .textlist {
   display: flex;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+   margin-left: 1rem;
+   margin-bottom: 1rem;
   background-color: #4ea3dd;
-  cursor: pointer;
-  border-radius: 0.2rem;
+ border-radius: 0.2rem;
   color: #dfe4f4;
   padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-right: 0.5rem; 
   flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
+ align-content: center;
   justify-content: flex-start;
   width: 70%;
-  height: 45%;
-  overflow: hidden;
+  height: 20%;
+overflow: hidden;
 }
-.title {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+ .title {
+   margin-top: 1rem;
+  margin-bottom: 1rem; 
 }
 
 h1 {
   color: #0193f7;
-  margin-bottom: 1rem;
+ margin-bottom: 1rem; 
 }
 
 .textbtn {

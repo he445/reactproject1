@@ -16,20 +16,22 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 function featured() {
- const [list, setlist] = useState([])
- useEffect(() => {
-    const getlist = async () => {
-      try {
-        const res = await axios.get(url + '/characters');
-        setlist(res.data);
-        console.log(res);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+  const [list, setlist] = useState([]);
+  const getlist = async () => {
+    try {
+      const res = await axios.get(url + '/characters');
+      setlist(res.data);
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
+   
     getlist();
   }, []);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [uniqueList, setUniqueList] = useState([]);
   function handleModal() {
     setModalIsOpen(!modalIsOpen);
   }
@@ -37,30 +39,44 @@ function featured() {
   return (
     <section className="feature">
       <h1>Textos </h1>
-    {list.map((list) => { return (<> 
-    
-      <ul className="featureUL">
-        <li className="textlist">
-          <h2 className="title">{list.title
-}</h2>
-          <p>
-            {list.text}
-          </p>
-          <button className="modal-button" onClick={handleModal}>
-            Ler mais
-          </button>
-        </li>
-      </ul>
+      {list.map((list, index) => {
+       
+       
+       return (
+          <>
+            <ul className="featureUL">
+              <li className="textlist">
+                <h2 className="title">{list.title}</h2>
+                <p>{list.text[0]}</p>
+                <p>{list.text[1] + ' (...)'}</p>
+                <button
+                  className="modal-button"
+                  onClick={() => {
+                   setUniqueList(list)
+                    handleModal()
 
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={handleModal}
-        contentLabel="form Create"
-        style={customStyles}
-      >
-        <TextModal handleModal={handleModal} />
-      </Modal></>)})} 
-      
+
+                  }}
+                  
+                >
+                  Ler mais
+                </button>
+              </li>
+            </ul>
+
+           
+          </>
+        );
+      })}
+       <Modal
+              isOpen={modalIsOpen}
+              onRequestClose={handleModal}
+              contentLabel="form Create"
+              style={customStyles}
+            >
+              <TextModal title={uniqueList.title} text={uniqueList.text} />
+            </Modal>
     </section>
-)}
+  );
+}
 export default featured;
