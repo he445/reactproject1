@@ -1,6 +1,8 @@
 import Modal from 'react-modal';
 import TextModal from '../TextModal/textModal';
-import { useState } from 'react';
+import axios, { Axios } from 'axios';
+import { useEffect, useState } from 'react';
+import url from '../api/api';
 import './Featured.css';
 const customStyles = {
   content: {
@@ -14,6 +16,19 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 function featured() {
+ const [list, setlist] = useState([])
+ useEffect(() => {
+    const getlist = async () => {
+      try {
+        const res = await axios.get(url + '/characters');
+        setlist(res.data);
+        console.log(res);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getlist();
+  }, []);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   function handleModal() {
     setModalIsOpen(!modalIsOpen);
@@ -22,14 +37,14 @@ function featured() {
   return (
     <section className="feature">
       <h1>Textos </h1>
+    {list.map((list) => { return (<> 
+    
       <ul className="featureUL">
         <li className="textlist">
-          <h2 className="title">Titulo</h2>
+          <h2 className="title">{list.title
+}</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo animi
-            unde, tempora magni ea laboriosam numquam, labore explicabo possimus
-            vel iste quam non placeat pariatur doloremque totam dignissimos, rem
-            sequi?
+            {list.text}
           </p>
           <button className="modal-button" onClick={handleModal}>
             Ler mais
@@ -44,8 +59,8 @@ function featured() {
         style={customStyles}
       >
         <TextModal handleModal={handleModal} />
-      </Modal>
+      </Modal></>)})} 
+      
     </section>
-  );
-}
+)}
 export default featured;
