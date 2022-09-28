@@ -1,5 +1,5 @@
 import Modal from 'react-modal';
-import { useState } from 'react';
+import {  useState } from 'react';
 import Form from '../formModal/formModal';
 import './navBar.css';
 const customStyles = {
