@@ -55,3 +55,17 @@
   width: 10%;
   height: 100%;
 }
+
+@media (min-width: 249px) and (max-width: 480px) {
+  .navbarFather {
+    margin-left: 0.3rem;
+  }
+  .navbar {
+    display: flex;
+  flex-direction: row;
+  width: 100%;}
+  .modal-button {
+    width: 30%;
+  }
+
+}
