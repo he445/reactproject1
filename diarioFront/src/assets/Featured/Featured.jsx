@@ -27,7 +27,6 @@ function featured() {
     }
   };
   useEffect(() => {
-   
     getlist();
   }, []);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -38,11 +37,8 @@ function featured() {
 
   return (
     <section className="feature">
-      <h1>Textos </h1>
       {list.map((list, index) => {
-       
-       
-       return (
+        return (
           <>
             <ul className="featureUL">
               <li className="textlist">
@@ -50,32 +46,28 @@ function featured() {
                 <p>{list.text[0]}</p>
                 <p>{list.text[1] + ' (...)'}</p>
                 <button
-                  className="modal-button"
+                  className="textbtn"
                   onClick={() => {
-                   setUniqueList(list)
-                    handleModal()
-
-
+                    setUniqueList(list);
+                    handleModal();
                   }}
-                  
                 >
                   Ler mais
                 </button>
               </li>
             </ul>
-
-           
           </>
         );
       })}
-       <Modal
-              isOpen={modalIsOpen}
-              onRequestClose={handleModal}
-              contentLabel="form Create"
-              style={customStyles}
-            >
-              <TextModal title={uniqueList.title} text={uniqueList.text} />
-            </Modal>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={handleModal}
+        contentLabel="form Create"
+        style={customStyles}
+      >
+        <TextModal title={uniqueList.title} text={uniqueList.text} />
+      </Modal>
     </section>
   );
 }

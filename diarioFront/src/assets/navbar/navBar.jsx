@@ -1,5 +1,7 @@
 import Modal from 'react-modal';
-import {  useState } from 'react';
+import { useEffect, useState } from 'react';
+import url from '../api/api';
+import axios, { Axios } from 'axios';
 import Form from '../formModal/formModal';
 import './navBar.css';
 const customStyles = {
@@ -13,17 +15,29 @@ const customStyles = {
 };
 
 Modal.setAppElement('#root');
-function navbar(create) {
+function navbar() {
+  const [list, setlist] = useState([]);
+  const getlist = async () => {
+    try {
+      const res = await axios.get(url + '/characters');
+      setlist(res.data);
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
+    getlist();
+  }, []);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   function handleModal() {
     setModalIsOpen(!modalIsOpen);
   }
   return (
-    <section>
+    <section className="navbarFather">
       <nav className="navbar">
         <h1 className="navbarh1">Diario da Loucura</h1>
         <button className="modal-button" onClick={handleModal}>
-          {' '}
           create
         </button>
         {/* <ul className="navBarUl">
@@ -39,7 +53,7 @@ function navbar(create) {
         contentLabel="form Create"
         style={customStyles}
       >
-        <Form handleModal={handleModal} />
+        <Form getAll={getlist} handleModal={handleModal} />
       </Modal>
     </section>
   );

@@ -8,3 +8,7 @@ form {
 label {
   color: #dfe4f4;
 }
+#lname {
+  display: flex;
+  height: 50%;
+}

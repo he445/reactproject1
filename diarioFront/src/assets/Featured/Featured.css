@@ -1,46 +1,56 @@
 .feature {
   margin-top: 2rem;
-  width: 90%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* justify-content: start;
+  align-items: baseline;
+  align-content: start; */
 }
-.featureUL{
- width: 60%;
 
+.featureUL {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 30%;
+  height: 10%;
 }
 
 .textlist {
   display: flex;
-   margin-left: 1rem;
-   margin-bottom: 1rem;
+  margin-left: 1rem;
   background-color: #4ea3dd;
- border-radius: 0.2rem;
+  border-radius: 0.2rem;
   color: #dfe4f4;
   padding-left: 0.5rem;
-  padding-right: 0.5rem; 
+  padding-right: 0.5rem;
   flex-direction: column;
- align-content: center;
+  align-content: center;
   justify-content: flex-start;
-  width: 70%;
-  height: 20%;
-overflow: hidden;
+  width: 90%;
+  height: 30%;
+  overflow: hidden;
 }
- .title {
-   margin-top: 1rem;
-  margin-bottom: 1rem; 
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
   color: #0193f7;
- margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
 .textbtn {
   background-color: #4ea3dd;
   color: #dfe4f4;
+  border-color: #dfe4f4;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.3rem;
   border-top-left-radius: 0.3rem;
-  border-color: #dfe4f4;
-  width: 10%;
-  height: 15%;
+  text-align: center;
+  width: 100%;
+  height: 20%;
 }
