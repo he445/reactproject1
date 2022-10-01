@@ -3,7 +3,7 @@ import axios, { Axios } from 'axios';
 import url from '../api/api';
 import { useState } from 'react';
 function form({ getAll, handleModal }) {
-  const [newText, setNewText] = useState({});
+  const [newText, setNewText] = useState({text:[]});
   const [loading, setLoading] = useState(false);
 
   async function handleSubmit(event) {
@@ -35,9 +35,9 @@ function form({ getAll, handleModal }) {
               console.log('aoba', newText);
             }}
           />
-          <label id="lname">Texto</label>
-          <span>separe as linhas ulizando o "/"</span>
-          <input
+          <label id="lnameT">Texto</label>
+          <span>Separe as linhas ulizando o "/"</span>
+          <textarea
             type="text"
             id="lname"
             name="text"
