@@ -28,7 +28,7 @@ function featured() {
   };
   useEffect(() => {
     getlist();
-  },[]);
+  }, []);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [uniqueList, setUniqueList] = useState([]);
   function handleModal() {

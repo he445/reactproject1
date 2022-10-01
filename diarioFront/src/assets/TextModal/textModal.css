@@ -7,7 +7,6 @@
   height: 100%;
   color: #dfe4f4;
   overflow: scroll;
-
 }
 
 .textModalH2 {
@@ -17,5 +16,5 @@
 
 .textModalP {
   padding-top: 1rem;
-  padding-left: 0.4rem;}
- 
+  padding-left: 0.4rem;
+}

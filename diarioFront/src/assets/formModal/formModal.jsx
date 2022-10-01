@@ -3,7 +3,7 @@ import axios, { Axios } from 'axios';
 import url from '../api/api';
 import { useState } from 'react';
 function form({ getAll, handleModal }) {
-  const [newText, setNewText] = useState({text:[]});
+  const [newText, setNewText] = useState({ text: [] });
   const [loading, setLoading] = useState(false);
 
   async function handleSubmit(event) {
