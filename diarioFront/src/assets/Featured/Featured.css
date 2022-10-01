@@ -57,6 +57,7 @@ h1 {
   .feature {
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: normal
   }
   .featureUL {
     display: flex;
