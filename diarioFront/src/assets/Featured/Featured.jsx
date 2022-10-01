@@ -7,7 +7,7 @@ import './Featured.css';
 const customStyles = {
   content: {
     width: '50%',
-    height: '90%',
+    height: '70%',
   },
   overlay: {
     background: 'rgba(0, 0, 0, 0.4)',
