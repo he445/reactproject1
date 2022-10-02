@@ -15,20 +15,8 @@ const customStyles = {
 };
 
 Modal.setAppElement('#root');
-function navbar() {
-  const [list, setlist] = useState([]);
-  const getlist = async () => {
-    try {
-      const res = await axios.get(url + '/characters');
-      setlist(res.data);
-      console.log(res);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  useEffect(() => {
-    getlist();
-  }, []);
+function navbar({getAll}) {
+  
   const [modalIsOpen, setModalIsOpen] = useState(false);
   function handleModal() {
     setModalIsOpen(!modalIsOpen);
@@ -53,7 +41,7 @@ function navbar() {
         contentLabel="form Create"
         style={customStyles}
       >
-        <Form getAll={getlist} handleModal={handleModal} />
+        <Form getAll={getAll} handleModal={handleModal} />
       </Modal>
     </section>
   );
