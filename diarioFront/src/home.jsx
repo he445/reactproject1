@@ -40,14 +40,14 @@ function home() {
     <div className="home">
       <NavBar getAll= {getlist}/>
       <section className="feature">
+      <ul className="featureUL">
       {list.map((list, index) => {
         return (
-          <>
-            <ul className="featureUL">
+      
               <li className="textlist">
                 <h2 className="title">{list.title}</h2>
-                <p>{list.text[0]}</p>
-                <p>{list.text[1] + ' (...)'}</p>
+                <p className='pp'><pre>{list.text}</pre></p>
+              
                 <button
                   className="textbtn"
                   onClick={() => {
@@ -58,11 +58,11 @@ function home() {
                   Ler mais
                 </button>
               </li>
-            </ul>
-          </>
+           
+        
         );
       })}
-
+  </ul>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={handleModal}

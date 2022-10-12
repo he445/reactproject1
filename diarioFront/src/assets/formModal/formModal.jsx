@@ -24,7 +24,7 @@ function form({ getAll, handleModal }) {
       {loading ? (
         <div> loading...</div>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form className='formM'  onSubmit={handleSubmit} >
           <label id="fname">Titulo:</label>
           <input
             type="text"
@@ -36,13 +36,13 @@ function form({ getAll, handleModal }) {
             }}
           />
           <label id="lnameT">Texto</label>
-          <span>Separe as linhas ulizando o "/"</span>
+          
           <textarea
             type="text"
             id="lname"
             name="text"
             onChange={(event) => {
-              setNewText({ ...newText, text: event.target.value.split('/') });
+              setNewText({ ...newText, text: event.target.value});
               console.log('aoba', newText);
             }}
           />

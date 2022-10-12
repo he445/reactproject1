@@ -6,9 +6,9 @@ function text({ title, text }) {
       <h2 className="textModalH2">
         {title} {console.log(title)}
       </h2>
-      {text.map((text) => {
-        return <p className="textModalP">{text}</p>;
-      })}
+     <p className="textModalP"> <pre>{text}</pre></p>;
+  
+    
     </section>
   );
 }
