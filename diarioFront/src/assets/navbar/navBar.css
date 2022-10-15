@@ -29,12 +29,14 @@
 .navBarLI {
   display: flex;
   flex-direction: row;
+  margin-top: 0.5rem;
   margin-left: 1rem;
   margin-bottom: 1rem;
   background-color: #4ea3dd;
   cursor: pointer;
   border-radius: 0.2rem;
   color: #dfe4f4;
+  padding-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }

@@ -24,12 +24,13 @@ function navbar({getAll}) {
   return (
     <section className="navbarFather">
       <nav className="navbar">
-        <ul className="navBarUl">
+        <h1  className="navbarh1">Diario da Loucura</h1>
+        {/* <ul className="navBarUl">
       <li className="navBarLI">Home</li>
       <li className="navBarLI">Poesias</li>
       <li className="navBarLI">Contos</li>
       <li className="navBarLI">Prosa</li>
-    </ul>
+    </ul> */}
     <button className="modal-button" onClick={handleModal}>
           create
         </button>

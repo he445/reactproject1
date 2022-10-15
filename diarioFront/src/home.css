@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
-  background-color: #dfe4f4;
+ background-color: #dfe4f4;
 }
 .feature {
  
@@ -30,6 +29,7 @@
   background-color: #4ea3dd;
   border-radius: 0.2rem;
   color: #dfe4f4;
+  padding-top: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   flex-direction: column;
