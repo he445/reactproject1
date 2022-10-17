@@ -20,9 +20,12 @@ Modal.setAppElement('#root');
 function home() {
   const [list, setlist] = useState([]);
   const [control, setControl] = useState(false)
+  const [edtedList, setEdtedList] = useState(false)
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [uniqueList, setUniqueList] = useState([]);
   function updatePage() {
     setControl(!control)
-    alert("Texto deletado");}
+    alert("sucesso");}
   const getlist = async () => {
     try {
       const res = await axios.get(url + '/characters');
@@ -34,22 +37,41 @@ function home() {
   };
   const deleteList = async (listid) => {
     try {
-      axios.delete(url + `/characters/delete/${listid}`);
+      await axios.delete(url + `/characters/delete/${listid}`);
       const newList = list;
       newList.map((list, index) => {
         if (list._id === listid) {
           newList.splice(index, 1);
-          setlist = newList;
+          setUniqueList = newList;
           
         }
       });
     } catch (error) {console.log(err);}
   };
+  const updataList = async (e) => {
+   e.preventDefault()
+   const updatedList = {
+    id:uniqueList._id,
+    title: e.target.title.value,
+    text: e.target.text.value
+   }
+    
+   const newList = list;
+   newList.map((list, index) => {
+     if (list._id === updatedList.id) {
+       newList.splice(index, 1,updatedList);
+       list = newList;  handleModal()}})
+  
+       setEdtedList(false)
+    
+    
+  await axios.put(url + `/characters/update/${updatedList.id}`)
+  control()
+  }
   useEffect(() => {
     getlist();
   }, [control]);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [uniqueList, setUniqueList] = useState([]);
+  
   function handleModal() {
     setModalIsOpen(!modalIsOpen);
   }
@@ -58,6 +80,7 @@ function home() {
       <NavBar getAll={getlist} />
       <section className="feature">
         <ul className="featureUL">
+         
           {list.map((list, index) => {
             return (
               <li className="textlist">
@@ -82,7 +105,14 @@ function home() {
                   
               ;
               }}>delete</button>
-  <button  >update</button></div>
+  <button onClick={() => {
+                  console.log("aoba")
+                  setUniqueList(list);
+                  handleModal()
+                  setEdtedList(true)
+
+              ;
+              }}  >update</button></div>
                 
               </li>
             );
@@ -93,9 +123,29 @@ function home() {
           onRequestClose={handleModal}
           contentLabel="form Create"
           style={customStyles}
-        >
-          <TextModal title={uniqueList.title} text={uniqueList.text}
-           />
+
+        >{edtedList ?(
+            <form className= "formM" onSubmit={updataList} >
+            <input
+              type="text"
+              id="fname"
+              name="title"
+              defaultValue={uniqueList.title}
+            />
+            
+            
+            <textarea
+              type="text"
+              id="lname"
+              name="text"
+              defaultValue={uniqueList.text}
+            />
+            <button type="submit" className="btn-submit">
+              Submit
+            </button>
+          </form>) :
+          (<TextModal title={uniqueList.title} text={uniqueList.text}
+           />)}
         </Modal>
       </section>
     </div>
