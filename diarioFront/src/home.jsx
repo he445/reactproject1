@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { api } from '../src/assets/api/api';
 const customStyles = {
   content: {
-    width: '50%',
+    width: '100%',
     height: '70%',
   },
   overlay: {
