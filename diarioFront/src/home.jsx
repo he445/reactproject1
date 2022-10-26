@@ -67,7 +67,7 @@ function home() {
         handleModal();
       }
     });
-    console.log('oiu', updatedList);
+   
     await api.update(updatedList);
   };
   useEffect(() => {
