@@ -30,7 +30,7 @@ function home() {
   const getlist = async () => {
     try {
       const res = await api.getAll();
-      console.log('oi', res);
+
       setlist(res);
       console.log(res);
     } catch (err) {
@@ -67,7 +67,7 @@ function home() {
         handleModal();
       }
     });
-   
+
     await api.update(updatedList);
   };
   useEffect(() => {
@@ -80,11 +80,8 @@ function home() {
     <div className="home">
             
       <NavBar getAll={getlist} />
-            
       <section className="feature">
-                
         <ul className="featureUL">
-                              
           {list.map((list, index) => {
             return (
               <li className="textlist">
@@ -107,7 +104,6 @@ function home() {
                   >
                     Ler mais                 
                   </button>
-                  
                   <button
                     className="textbnt2"
                     onClick={() => {
@@ -116,7 +112,6 @@ function home() {
                   >
                     delete
                   </button>
-                  
                   <button
                     className="textbnt3"
                     onClick={() => {
