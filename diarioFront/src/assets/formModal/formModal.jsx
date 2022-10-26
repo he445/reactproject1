@@ -1,6 +1,5 @@
 import './formModal.css';
-import axios, { Axios } from 'axios';
-import url from '../api/api';
+import { api } from '../api/api';
 import { useState } from 'react';
 function form({ getAll, handleModal }) {
   const [newText, setNewText] = useState({ text: [] });
@@ -10,7 +9,7 @@ function form({ getAll, handleModal }) {
     setLoading(true);
     event.preventDefault();
     try {
-      await axios.post(url + '/characters/create', newText);
+      await api.creat(newText);
       await getAll();
       console.log('ok');
     } catch (error) {}
@@ -24,7 +23,7 @@ function form({ getAll, handleModal }) {
       {loading ? (
         <div> loading...</div>
       ) : (
-        <form className='formM'  onSubmit={handleSubmit} >
+        <form className="formM" onSubmit={handleSubmit}>
           <label id="fname">Titulo:</label>
           <input
             type="text"
@@ -36,13 +35,13 @@ function form({ getAll, handleModal }) {
             }}
           />
           <label id="lnameT">Texto</label>
-          
+
           <textarea
             type="text"
             id="lname"
             name="text"
             onChange={(event) => {
-              setNewText({ ...newText, text: event.target.value});
+              setNewText({ ...newText, text: event.target.value });
               console.log('aoba', newText);
             }}
           />

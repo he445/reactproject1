@@ -1,7 +1,5 @@
 import Modal from 'react-modal';
 import { useEffect, useState } from 'react';
-import url from '../api/api';
-import axios, { Axios } from 'axios';
 import Form from '../formModal/formModal';
 import './navBar.css';
 const customStyles = {
@@ -15,8 +13,7 @@ const customStyles = {
 };
 
 Modal.setAppElement('#root');
-function navbar({getAll}) {
-  
+function navbar({ getAll }) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   function handleModal() {
     setModalIsOpen(!modalIsOpen);
@@ -24,14 +21,14 @@ function navbar({getAll}) {
   return (
     <section className="navbarFather">
       <nav className="navbar">
-        <h1  className="navbarh1">Diario da Loucura</h1>
+        <h1 className="navbarh1">Diario da Loucura</h1>
         {/* <ul className="navBarUl">
       <li className="navBarLI">Home</li>
       <li className="navBarLI">Poesias</li>
       <li className="navBarLI">Contos</li>
       <li className="navBarLI">Prosa</li>
     </ul> */}
-    <button className="modal-button" onClick={handleModal}>
+        <button className="modal-button" onClick={handleModal}>
           create
         </button>
       </nav>
